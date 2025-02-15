@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+</head>
+<body>
+    <h1>User Profile</h1>
+    
+    <p><strong>Name:</strong> <%= user.name %></p>
+    <p><strong>Email:</strong> <%= user.email %></p>
+    
+    <h2>Profile Picture</h2>
+    <img src="/uploads/<%= user.profilePicture %>" alt="Profile Picture" width="150">
+
+    <!-- Upload Profile Picture -->
+    <form action="/upload-profile" method="POST" enctype="multipart/form-data">
+        <input type="file" name="profilePicture" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    <br>
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>

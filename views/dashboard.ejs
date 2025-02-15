@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+</head>
+<body>
+    <h1>Welcome, <%= user.name %>!</h1>
+
+    <h2>Your Profile</h2>
+    <p><strong>Email:</strong> <%= user.email %></p>
+
+    <h3>Profile Picture</h3>
+    <img src="/uploads/<%= user.profilePicture %>" alt="Profile Picture" width="150">
+    
+    <br>
+    <a href="/profile">Go to Profile</a>
+    <br><br>
+    <a href="/logout">Logout</a>
+</body>
+</html>
